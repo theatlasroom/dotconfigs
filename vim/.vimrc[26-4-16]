@@ -1,0 +1,81 @@
+set nocompatible                " choose no compatibility with legacy vi
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" Fugitive git plugin
+Plugin 'tpope/vim-fugitive.git'
+
+" Scroll colors plugin
+Plugin 'https://github.com/vim-scripts/ScrollColors'
+
+" Nerdtree tabs plugin:
+Bundle 'jistr/vim-nerdtree-tabs'
+
+" Airline toolbar
+Plugin 'bling/vim-airline'
+
+" Jshint plugin
+Plugin 'wookiehangover/jshint.vim'
+
+" Markdown plugins
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+
+" Other plugins
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'chriskempson/base16-vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'Shutnik/jshint2.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'honza/vim-snippets'
+Plugin 'ervandew/supertab'
+Plugin 'majutsushi/tagbar'
+
+" Add some angular-y plugins
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'burnettk/vim-angular'
+Plugin 'pangloss/vim-javascript'
+
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+
+set number                      " show line numbers
+let g:nerdtree_tabs_open_on_gui_startup=1
+colo Tomorrow-Night-Eighties
+
+syntax on
+
+filetype plugin indent on    " required
+
+syntax enable
+set encoding=utf-8
+set showcmd                     " display incomplete commands
+filetype plugin indent on       " load file type plugins + indentation
+
+"" Whitespace
+set nowrap                      " don't wrap lines
+set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
+set expandtab                   " use spaces, not tabs (optional)
+set backspace=indent,eol,start  " backspace through everything in insert mode
+
+"" Searching
+set hlsearch                    " highlight matches
+set incsearch                   " incremental searching
+set ignorecase                  " searches are case insensitive...
+set smartcase                   " ... unless they contain at least one capital letter
