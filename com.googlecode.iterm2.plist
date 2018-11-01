@@ -4229,6 +4229,8 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
+	<key>NSFontPanelAttributes</key>
+	<string>1, 1</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/playpen/dotconfigs</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -4272,7 +4274,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>681 110 693 292 0 0 1440 877 </string>
+	<string>491 145 1170 413 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>345 416 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
@@ -4280,17 +4282,19 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>219 188 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>269 298 796 486 0 0 1440 900 </string>
+	<string>269 334 796 486 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>28 25 1410 852 0 0 1440 877 </string>
+	<string>28 75 1030 802 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>452 23 810 652 0 0 1440 900 </string>
+	<string>452 0 810 777 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>197 47 650 452 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
 			<key>ASCII Anti Aliased</key>
+			<true/>
+			<key>ASCII Ligatures</key>
 			<true/>
 			<key>Allow Title Reporting</key>
 			<false/>
@@ -4875,15 +4879,17 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>ArimoForPowerline 12</string>
+			<string>HackNerdFontComplete-Regular 12</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
+			<key>Non-ASCII Ligatures</key>
+			<true/>
 			<key>Normal Font</key>
-			<string>FiraMonoForPowerlineForPowerlineForPowerlineForPowerline-Medium 15</string>
+			<string>DroidSansMonoForPowerline 15</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Right Option Key Sends</key>
 			<integer>0</integer>
 			<key>Rows</key>
