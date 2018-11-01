@@ -11,6 +11,7 @@ Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 " Multiple Plug commands can be written in a single line using | separators
 Plug 'honza/vim-snippets'
 
+Plug 'https://github.com/tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'junegunn/seoul256.vim'
 Plug 'kien/ctrlp.vim' " File opening shenanigans
@@ -19,7 +20,7 @@ Plug 'kien/ctrlp.vim' " File opening shenanigans
 Plug 'neovim/go-client'
 Plug 'awetzel/neovim-elixir'
 Plug 'neovim/node-client'
-Plug 'SidOfc/mkdx'
+" Plug 'SidOfc/mkdx'
 Plug 'https://github.com/daa84/neovim-lib.git'
 Plug 'mxw/vim-jsx'
 Plug 'leshill/vim-json'
@@ -32,7 +33,6 @@ Plug 'editorconfig/editorconfig-vim' " Grabs project editor configurations
 
 " Editor
 Plug 'mattn/emmet-vim'
-
 
 " airline status bar
 Plug 'vim-airline/vim-airline'
@@ -50,6 +50,12 @@ Plug 'janko-m/vim-test'
 
 " show git diff in gutter
 Plug 'mhinz/vim-signify'
+
+" realign text
+Plug 'godlygeek/tabular'
+
+" nerdtree stuffff
+Plug 'scrooloose/nerdtree'
 
 " Themes
 Plug 'arcticicestudio/nord-vim'
@@ -90,7 +96,7 @@ call plug#end()
 " use powerline fonts for airline
 " Vim markdown settings
 let g:mkdx#settings     = { 'highlight': { 'enable': 1 },
-                        \ 'enter': { 'shift': 1 },
+                        \ 'enter': { 'shift': 1, 'o': 1 },
                         \ 'links': { 'external': { 'enable': 1 } },
                         \ 'toc': { 'text': 'Table of Contents', 'update_on_write': 1 },
                         \ 'fold': { 'enable': 1 } }
@@ -119,5 +125,27 @@ colorscheme hybrid_material
 
 " Enable JSX in JS files
 let g:jsx_ext_required = 0
+
 " Let NERDTree see dotfiles
-" let NERDTreeShowHidden = 1
+let NERDTreeShowHidden = 1
+
+" nerdtree bindings
+map <C-n> :NERDTreeToggle<CR>
+"switching to below window
+no <C-j> <C-w>j 
+"switching to above window
+no <C-k> <C-w>k 
+"switching to right window
+no <C-l> <C-w>l 
+"switching to left window
+no <C-h> <C-w>h 
+
+" only close vim if the last window left is a nerdtree...
+autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" devicons requires utf8
+set encoding=UTF-8
+set guifont=<FONT_NAME>:h<FONT_SIZE>
+set guifont=DroidSansMono\ Nerd\ Font:h11
+" or:
+set guifont=DroidSansMono_Nerd_Font:h11
